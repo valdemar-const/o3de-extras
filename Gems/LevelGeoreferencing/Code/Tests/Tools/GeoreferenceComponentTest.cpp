@@ -90,10 +90,10 @@ namespace UnitTest
         AZ_Assert(m_levelEntity, "Failed to create level entity");
         AZ_Assert(m_originEntity, "Failed to create origin entity");
 
-        auto component = m_levelEntity->CreateComponent<Georeferencing::GeoReferenceLevelComponent>();
+        [[maybe_unused]] auto component = m_levelEntity->CreateComponent<Georeferencing::GeoReferenceLevelComponent>();
         AZ_Assert(component, "Failed to create GeoreferenceLevelComponent");
 
-        auto transformComponent = m_originEntity->CreateComponent<AzFramework::TransformComponent>();
+        [[maybe_unused]] auto transformComponent = m_originEntity->CreateComponent<AzFramework::TransformComponent>();
         AZ_Assert(transformComponent, "Failed to create TransformComponent");
 
         m_levelEntity->Init();
