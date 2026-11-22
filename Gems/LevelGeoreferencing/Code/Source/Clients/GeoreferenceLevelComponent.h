@@ -69,7 +69,7 @@ namespace Georeferencing
         void ApplyOriginTransform(const AZ::Transform& worldTransform);
 
         GeoReferenceLevelConfig m_config;
-        AZ::Transform m_enuOriginTransform; //!< Transform of the entity that lays in the origin of the ENU coordinate system
+        AZ::Transform m_enuOriginTransform = AZ::Transform::CreateIdentity(); //!< Transform of the entity that lays in the origin of the ENU coordinate system
     };
 
     using GeoReferenceLevelComponentBase = AzFramework::Components::ComponentAdapter<GeoReferenceLevelController, GeoReferenceLevelConfig>;
